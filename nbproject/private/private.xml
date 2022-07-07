@@ -4,7 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/D:/Programs/NetBeansProjects/NumericalAnalysis/src/Controller/Main.java</file>
+            <file>file:/D:/Programs/NetBeansProjects/NumericalAnalysis/src/Models/NewtonRaphson.java</file>
             <file>file:/D:/Programs/NetBeansProjects/NumericalAnalysis/src/Models/Secant.java</file>
+            <file>file:/D:/Programs/NetBeansProjects/NumericalAnalysis/src/Models/Method.java</file>
+            <file>file:/D:/Programs/NetBeansProjects/NumericalAnalysis/src/Models/Table.java</file>
         </group>
     </open-files>
 </project-private>

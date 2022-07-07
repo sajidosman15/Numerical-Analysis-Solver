@@ -29,4 +29,8 @@ public class Table {
     public void printSecantRow(){
         System.out.println("    "+iter+"\t\t "+xiMinus1+"   \t  "+xi+"  \t    "+xiplus1+"\t\t"+error);
     }
+    
+    public void printFixedPointRow(){
+        System.out.println(iter+"\t"+i+"      X"+i+" = "+xi+"     \tX"+(i+1)+" = "+xiplus1+"    \t"+error);
+    }
 }

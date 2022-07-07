@@ -2,6 +2,7 @@ package Controller;
 
 import Models.BiSection;
 import Models.FalsePosition;
+import Models.FixedPoint;
 import Models.NewtonRaphson;
 import Models.Secant;
 import java.util.Scanner;
@@ -34,8 +35,8 @@ public class Main {
         /*
             Bi section and False Position Input
          */
-        String function = "28x^5+3x^3-56x^2+20x-320";
-        String xl = "1";
+        String function = "-0.6x^2+2.4x+5.5";
+        String xl = "-3";
         String xu = "2";
         int iterationNumber = 5;
 
@@ -55,11 +56,20 @@ public class Main {
         String XiMinus1 = "0.02";
         String Xi = "0.05";
 
+        /*
+            Fixed Point Method Input
+         */
+        String fixedfunctionX = "(x+10)^(1/4)";
+        String fixedOldRoot = "4";
+        int FinitialIteration = 0;
+        
+        
         Scanner in = new Scanner(System.in);
         System.out.println("1. Bi Section.");
         System.out.println("2. False Position.");
         System.out.println("3. Newton Raphson.");
         System.out.println("4. Secant Method.");
+        System.out.println("5. Fixed Point Method.");
         System.out.print("Choose Method: ");
         int method = in.nextInt();
 
@@ -80,11 +90,15 @@ public class Main {
                 Secant obj4 = new Secant(SecantfunctionX, XiMinus1, Xi);
                 obj4.runSecant(5);
                 break;
+            case 5:
+                FixedPoint obj5 = new FixedPoint(fixedfunctionX, fixedOldRoot, FinitialIteration);
+                obj5.runFixedPoint(10);
+                break;
             default:
                 break;
         }
 
-//        Calculation cal=new Calculation("(-21.125)×25");
+//        Calculation cal=new Calculation("(-325)×(-193)");
 //        System.out.println(cal.getAnswer());
     }
 }
