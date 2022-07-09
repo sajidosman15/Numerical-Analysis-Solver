@@ -3,6 +3,7 @@ package Controller;
 import Models.BiSection;
 import Models.FalsePosition;
 import Models.FixedPoint;
+import Models.LuDecomposition;
 import Models.NewtonRaphson;
 import Models.Secant;
 import java.util.Scanner;
@@ -64,39 +65,75 @@ public class Main {
         int FinitialIteration = 0;
         
         
-        Scanner in = new Scanner(System.in);
-        System.out.println("1. Bi Section.");
-        System.out.println("2. False Position.");
-        System.out.println("3. Newton Raphson.");
-        System.out.println("4. Secant Method.");
-        System.out.println("5. Fixed Point Method.");
-        System.out.print("Choose Method: ");
-        int method = in.nextInt();
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("1. Bi Section.");
+//        System.out.println("2. False Position.");
+//        System.out.println("3. Newton Raphson.");
+//        System.out.println("4. Secant Method.");
+//        System.out.println("5. Fixed Point Method.");
+//        System.out.print("Choose Method: ");
+//        int method = in.nextInt();
+//
+//        switch (method) {
+//            case 1:
+//                BiSection obj = new BiSection(function, xl, xu);
+//                obj.runBisection(iterationNumber);
+//                break;
+//            case 2:
+//                FalsePosition obj1 = new FalsePosition(function, xl, xu);
+//                obj1.runBisection(iterationNumber);
+//                break;
+//            case 3:
+//                NewtonRaphson obj3 = new NewtonRaphson(functionX, functionPrimeX, initialIteration, initialRoot);
+//                obj3.runNewton(numberOfIteration);
+//                break;
+//            case 4:
+//                Secant obj4 = new Secant(SecantfunctionX, XiMinus1, Xi);
+//                obj4.runSecant(5);
+//                break;
+//            case 5:
+//                FixedPoint obj5 = new FixedPoint(fixedfunctionX, fixedOldRoot, FinitialIteration);
+//                obj5.runFixedPoint(10);
+//                break;
+//            default:
+//                break;
+//        }
 
-        switch (method) {
-            case 1:
-                BiSection obj = new BiSection(function, xl, xu);
-                obj.runBisection(iterationNumber);
-                break;
-            case 2:
-                FalsePosition obj1 = new FalsePosition(function, xl, xu);
-                obj1.runBisection(iterationNumber);
-                break;
-            case 3:
-                NewtonRaphson obj3 = new NewtonRaphson(functionX, functionPrimeX, initialIteration, initialRoot);
-                obj3.runNewton(numberOfIteration);
-                break;
-            case 4:
-                Secant obj4 = new Secant(SecantfunctionX, XiMinus1, Xi);
-                obj4.runSecant(5);
-                break;
-            case 5:
-                FixedPoint obj5 = new FixedPoint(fixedfunctionX, fixedOldRoot, FinitialIteration);
-                obj5.runFixedPoint(10);
-                break;
-            default:
-                break;
-        }
+
+        int size=3;
+        double array[][]=new double[size][size];
+        double ZVector[]=new double[size];
+        
+        array[0][0]=25;
+        array[0][1]=5;
+        array[0][2]=1;
+//        array[0][3]=6;
+        
+        array[1][0]=64;
+        array[1][1]=8;
+        array[1][2]=1;
+//        array[1][3]=1;
+        
+        array[2][0]=144;
+        array[2][1]=12;
+        array[2][2]=1;
+//        array[2][3]=13;
+        
+//        array[3][0]=14;
+//        array[3][1]=122;
+//        array[3][2]=10;
+//        array[3][3]=1;
+        
+        ZVector[0]=106.8;
+        ZVector[1]=177.2;
+        ZVector[2]=279.2;
+//        ZVector[3]=179.2;
+
+
+        
+        LuDecomposition obj6=new LuDecomposition(array,ZVector, size);
+        obj6.runLuDecomposition();
+        
 
 //        Calculation cal=new Calculation("(-325)×(-193)");
 //        System.out.println(cal.getAnswer());
