@@ -5,6 +5,7 @@
         <group>
             <file>file:/D:/Programs/NetBeansProjects/NumericalAnalysis/src/Controller/Main.java</file>
             <file>file:/D:/Programs/NetBeansProjects/NumericalAnalysis/src/Models/LuDecomposition.java</file>
+            <file>file:/D:/Programs/NetBeansProjects/NumericalAnalysis/src/Models/GaussianElimination.java</file>
         </group>
     </open-files>
 </project-private>
